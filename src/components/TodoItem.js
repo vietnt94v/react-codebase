@@ -1,9 +1,12 @@
 import React from 'react'
 
-function TodoItem() {
+function TodoItem({ name, onClick, completed }) {
   return (
-    <li>
-      <span>Todo item</span>
+    <li
+      onClick={onClick}
+      className={`cs-pt ${completed ? 'text-secondary' : null}`}
+    >
+      {name}
     </li>
   )
 }
